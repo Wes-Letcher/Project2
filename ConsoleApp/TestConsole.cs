@@ -8,7 +8,7 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            string crmConnectionString = "AuthType=Office365;Url=https://revaturegp.crm.dynamics.com;UserName=system.robot@revaturegp.onmicrosoft.com;Password=robotPassword1";
+            string crmConnectionString = "AuthType=Office365;Url=https://revaturegp.crm7.dynamics.com;UserName=system.robot@revaturegp.onmicrosoft.com;Password=robotPassword1";
             CrmServiceClient service = new CrmServiceClient(crmConnectionString);
 
             Entity contact = new Entity("contact");
