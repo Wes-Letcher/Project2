@@ -83,6 +83,7 @@
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\bootstrap-policy.css" />
     <Content Include="ClaimForm.aspx" />
+    <Content Include="JS\Claim.js" />
     <Content Include="PolicyForm.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
