@@ -57,7 +57,6 @@
                         </tr>
 
                         <tr>
-                            
                             <td><select name="country" class="countries order-alpha include-CA-US presel-0" id="countryId">
                                 <option value="">Select Country</option>
                             </select></td>
