@@ -10,9 +10,72 @@
 
     <title>Revature Insurance</title>
 
+
     <link href="CSS/bootstrap-policy.css" rel="stylesheet" />
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.carqueryapi.com/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
+    <script type="text/javascript" src="JS/CarQuery.js"></script>
+
 </head>
 <body>
+<div class="row" runat="server">
+    <div class="col-md-6 col-md-offset-4">
+        <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Personal Details</li>
+                <li>Add Vehicle</li>
+                <li>Add Person</li>
+                <li>Select Policy</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset>
+                <h2 class="fs-title">Personal Details</h2>
+                <h3 class="fs-subtitle">Tell us something more about you</h3>
+                <input type="text" name="fname" placeholder="First Name"/>
+                <input type="text" name="lname" placeholder="Last Name"/>
+                <input type="text" name="zipcode" placeholder="Zipcode" />
+
+
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">Add Vehicle</h2>
+                <h3 class="fs-subtitle"></h3>
+
+                <select name="car-years" id="car-years"></select>  
+                <select name="car-makes" id="car-makes"></select> 
+                <select name="car-models" id="car-models"></select>
+                <select name="car-model-trims" id="car-model-trims"></select>  
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">Add Person</h2>
+                <h3 class="fs-subtitle">Who do you want on the policy</h3>
+
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h2 class="fs-title">Select Policy</h2>
+                <h3 class="fs-subtitle">Choose your policy</h3>
+
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+        </form>
+    </div>
+</div>
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label5" runat="server" Text="Label">Claim number</asp:Label>
@@ -70,5 +133,6 @@
         <br />
         <asp:TextBox ID="TextBox1" runat="server" Height="83px" Width="300px"></asp:TextBox>
     </form>
+    <script type="text/javascript" src="JS/NextPrevSubmit.js"></script>
 </body>
 </html>
