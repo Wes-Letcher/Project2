@@ -33,9 +33,6 @@
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Xrm.Sdk">
       <HintPath>..\..\Revature Insurance\packages\Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.9.0.2.12\tools\Microsoft.Xrm.Sdk.dll</HintPath>
@@ -64,7 +61,6 @@
     <None Include="Content\bootstrap-reboot.min.css.map" />
     <None Include="Content\bootstrap.css.map" />
     <None Include="Content\bootstrap.min.css.map" />
-    <None Include="key.snk" />
     <None Include="packages.config" />
     <None Include="Scripts\bootstrap.bundle.js.map" />
     <None Include="Scripts\bootstrap.bundle.min.js.map" />
