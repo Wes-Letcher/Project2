@@ -8,67 +8,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
+    <link href="HTML_Elements/Head.html" rel="import" />
     <title>Revature Insurance</title>
 
+    <!--
+        To change the number of steps in the progress bar:
+        1. Add/remove from unordered list with id="progressbar" the necessary list items.
+        2. Alter parent div class s.t. col-md-offset-(# of steps) contains the correct number of steps.
+        3. In bootstrap-claim.css, in the #progress li properties, change the width property to be some percent of the new number of steps. 
+            For Example, if steps = 4, width = 1/steps = 1/4 = 25%
+    -->
+    <link href="CSS/bootstrap-claim.css" rel="stylesheet" />
 
-    <link href="CSS/bootstrap-policy.css" rel="stylesheet" />
 
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://www.carqueryapi.com/js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
-    <script type="text/javascript" src="JS/CarQuery.js"></script>
+ 
+    
+    <!-- <script type="text/javascript" src="JS/CarQuery.js"></script> -->
 
 </head>
 <body>
 <div class="row" runat="server">
-    <div class="col-md-6 col-md-offset-4">
+    <div class="col-md-6 col-md-offset-3"> <!-- Change col-md-offset-(# of steps) number to match number of steps -->
         <form id="msform">
             <!-- progressbar -->
             <ul id="progressbar">
-                <li class="active">Personal Details</li>
-                <li>Add Vehicle</li>
-                <li>Add Person</li>
-                <li>Select Policy</li>
+                <li class="active">Claim Type</li>
+                <li>Own Damages</li>
+                <li>Other Party's Damages</li>
             </ul>
             <!-- fieldsets -->
             <fieldset>
-                <h2 class="fs-title">Personal Details</h2>
-                <h3 class="fs-subtitle">Tell us something more about you</h3>
-                <input type="text" name="fname" placeholder="First Name"/>
-                <input type="text" name="lname" placeholder="Last Name"/>
-                <input type="text" name="zipcode" placeholder="Zipcode" />
+                <h2 class="fs-title">Claim Type</h2>
+                <h3 class="fs-subtitle">Tell us what and when it happened</h3>
+                <select class="selectpicker" runat="server">
+                    <option value="car_accident">Car Accident</option>
+                    <option value="hail_damage">Hail Damage</option>
+                    <option value="vandalism">Vandalism</option>
+                    <option value="stolen">Stolen</option>
+                </select>
+                <br />
+                <asp:Label ID="Label3" runat="server" Text="Label">Date incident occurred</asp:Label>
+                <!-- <embed src="HTML_Elements/Calendar.html" /> -->
 
 
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
 
             <fieldset>
-                <h2 class="fs-title">Add Vehicle</h2>
+                <h2 class="fs-title">Own Damages</h2>
                 <h3 class="fs-subtitle"></h3>
 
-                <select name="car-years" id="car-years"></select>  
-                <select name="car-makes" id="car-makes"></select> 
-                <select name="car-models" id="car-models"></select>
-                <select name="car-model-trims" id="car-model-trims"></select>  
+                <!--
+                    <select name="car-years" id="car-years"></select>  
+                    <select name="car-makes" id="car-makes"></select> 
+                    <select name="car-models" id="car-models"></select>
+                    <select name="car-model-trims" id="car-model-trims"></select>  
+                -->
 
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
 
             <fieldset>
-                <h2 class="fs-title">Add Person</h2>
-                <h3 class="fs-subtitle">Who do you want on the policy</h3>
+                <h2 class="fs-title">Other Party's Damages</h2>
+                <h3 class="fs-subtitle"></h3>
 
-
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset>
-
-            <fieldset>
-                <h2 class="fs-title">Select Policy</h2>
-                <h3 class="fs-subtitle">Choose your policy</h3>
 
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="submit" name="submit" class="submit action-button" value="Submit"/>
@@ -84,12 +91,12 @@
             <br />
             <br />
             <asp:Label ID="Label1" runat="server" Text="Label">Incident</asp:Label>
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                <asp:ListItem>Car Accident</asp:ListItem>
-                <asp:ListItem>Hail Damage</asp:ListItem>
-                <asp:ListItem>Vandalism</asp:ListItem>
-                <asp:ListItem>Stolen</asp:ListItem>
-            </asp:RadioButtonList>
+            <select class="selectpicker" runat="server">
+                <option value="car_accident">Car Accident</option>
+                <option value="hail_damage">Hail Damage</option>
+                <option value="vandalism">Vandalism</option>
+                <option value="stolen">Stolen</option>
+            </select>
             <br />
         </div>
         <br />
@@ -123,16 +130,11 @@
             <asp:ListItem>Totalled</asp:ListItem>
         </asp:RadioButtonList>
         <br />
-        <br />
-        <asp:Label ID="Label3" runat="server" Text="Label">Date incident occurred
-</asp:Label>
-        <br />
-        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
-        <br />
         <asp:Label ID="Label4" runat="server" Text="Label">Notes/Comments/Description</asp:Label>
         <br />
         <asp:TextBox ID="TextBox1" runat="server" Height="83px" Width="300px"></asp:TextBox>
     </form>
+
     <script type="text/javascript" src="JS/NextPrevSubmit.js"></script>
 </body>
 </html>

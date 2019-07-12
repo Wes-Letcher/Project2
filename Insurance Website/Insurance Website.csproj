@@ -77,15 +77,18 @@
   <ItemGroup>
     <Content Include="CSS\bootstrap-grid.css" />
     <Content Include="CSS\bootstrap-grid.min.css" />
+    <Content Include="CSS\bootstrap-claim.css" />
     <Content Include="CSS\bootstrap-reboot.css" />
     <Content Include="CSS\bootstrap-reboot.min.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\bootstrap-policy.css" />
     <Content Include="ClaimForm.aspx" />
-    <Content Include="JS\CarQuery.js" />
-    <Content Include="JS\Claim.js" />
-    <Content Include="JS\NextPrevSubmit.js" />
+    <Content Include="HTML_Elements\Calendar.html" />
+    <Content Include="HTML_Elements\Head.html" />
+    <Content Include="Scripts\JS\CarQuery.js" />
+    <Content Include="Scripts\JS\Claim.js" />
+    <Content Include="Scripts\JS\NextPrevSubmit.js" />
     <Content Include="PolicyForm.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
