@@ -82,6 +82,7 @@
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\bootstrap-policy.css" />
+    <Content Include="ClaimForm.aspx" />
     <Content Include="PolicyForm.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -105,6 +106,7 @@
     <Content Include="CSS\bootstrap-reboot.css.map" />
     <Content Include="CSS\bootstrap-grid.min.css.map" />
     <Content Include="CSS\bootstrap-grid.css.map" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -121,6 +123,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaimForm.aspx.cs">
+      <DependentUpon>ClaimForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimForm.aspx.designer.cs">
+      <DependentUpon>ClaimForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CRMConnect.cs" />
     <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\Policy.cs" />
@@ -132,6 +141,13 @@
       <DependentUpon>PolicyForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
