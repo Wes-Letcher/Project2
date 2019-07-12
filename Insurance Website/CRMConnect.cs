@@ -19,8 +19,5 @@ namespace Insurance_Website
             service = new CrmServiceClient(crmConnectionString);
         }
 
-
-        
-
     }
 }
