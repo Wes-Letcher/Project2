@@ -11,8 +11,8 @@ body {
 
 
 select {
-    width: 200px;
-    float: left;
+    width: 250px;
+    margin:auto;
 }
 
 /*form styles*/
@@ -29,8 +29,8 @@ select {
         box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
         padding: 20px 30px;
         box-sizing: border-box;
-        width: 80%;
-        margin: 0 10%;
+        width: 60%;
+        margin: 0 20%;
         /*stacking fieldsets above each other*/
         position: relative;
     }
@@ -42,14 +42,14 @@ select {
 
     /*inputs*/
     #msform input, #msform textarea {
-        padding: 15px;
+        padding: 0px; /*Changed*/
         border: 1px solid #ccc;
         border-radius: 0px;
-        margin-bottom: 10px;
-        width: 100%;
+        margin-bottom: 0px; /*Changed*/
+        width: 250px; /*Changed*/
         box-sizing: border-box;
-        font-family: montserrat;
-        color: #2C3E50;
+   /*     font-family: montserrat; */
+  /*      color: #2C3E50; */
         font-size: 13px;
     }
 
@@ -67,7 +67,7 @@ select {
 
     /*buttons*/
     #msform .action-button {
-        width: 100px;
+        width: 140px;
         background: #3B6093;
         font-weight: bold;
         color: white;
@@ -82,24 +82,11 @@ select {
             box-shadow: 0 0 0 2px white, 0 0 0 3px #3B6093;
         }
 
-    #msform .action-button-previous {
-        width: 100px;
-        background: #3B6093;
-        font-weight: bold;
-        color: white;
-        border: 0 none;
-        border-radius: 25px;
-        cursor: pointer;
-        padding: 10px 5px;
-        margin: 10px 5px;
-    }
-
-        #msform .action-button-previous:hover, #msform .action-button-previous:focus {
-            box-shadow: 0 0 0 2px white, 0 0 0 3px #3B6093;
-        }
-
 .hide {
     display: none;
+}
+.show{
+    display:block;
 }
 
 /*headings*/

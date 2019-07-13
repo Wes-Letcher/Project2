@@ -1,0 +1,11 @@
+<option value="-1" selected="selected" disabled="disabled">Select Model</option>
+<option value="Avenger">Avenger</option>
+<option value="Caliber">Caliber</option>
+<option value="Challenger">Challenger</option>
+<option value="Charger">Charger</option>
+<option value="Dakota">Dakota</option>
+<option value="Grand Caravan">Grand Caravan</option>
+<option value="Journey">Journey</option>
+<option value="Nitro">Nitro</option>
+<option value="Ram">Ram</option>
+<option value="Viper">Viper</option>

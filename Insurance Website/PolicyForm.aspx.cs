@@ -13,5 +13,20 @@ namespace Insurance_Website
         {
 
         }
+
+        protected void Get_Quote(object sender, EventArgs e)
+        {
+            //create contacts
+            //return price
+
+            //can do complex logic here?
+        }
+
+        protected void Create_Policy(object sender, EventArgs e)
+        {
+            //create policy
+            //create cars
+
+        }
     }
 }

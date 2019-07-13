@@ -11,22 +11,42 @@
     <title>Revature Insurance</title>
     
     <link href="CSS/bootstrap-policy.css" rel="stylesheet" />
- 
-    <script type="text/javascript" src="https://www.carqueryapi.com/js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://www.carqueryapi.com/js/carquery.0.3.4.js"></script>
-    <script src="Scripts/CarApiConnection.js"></script>
 
     <style>
-        input[type=text]{
+        input[type=text],[type=password],[type=email]{
             height: 20px;
+            width:250px;
+            margin:auto;
+            vertical-align: bottom;
         }
+        table{
+            margin: 0 auto;
+            width:100%;
+        }
+        td {
+          height: 25px;
+          vertical-align: bottom;
+        }
+        .next,.previous,.submit{
+            float:right;
+        }
+        .add,.remove{
+            float:left;
+        }
+        #vehicle_div div, #person_div div{
+            padding-bottom: 25px;
+        }
+        #vehicle_div fieldset, #person_div fieldset{
+            border: solid;
+            border-width:3px;
+        }
+        
     </style>
 
 </head>
 <body>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//geodata.solutions/includes/countrystatecity.js"></script>
-    <script src="Scripts/ProfilePage.js"></script>
+    <script src="Scripts/PolicyPage.js"></script>
 
     <!-- MultiStep Form -->
 <div class="row" runat="server">
@@ -39,81 +59,136 @@
                 <li>Select Policy</li>
             </ul>
             <!-- fieldsets -->
-
             <div class="policy_stage" id="add_person_stage">
+                <div id="person_div">
+                    <div>
+                        <fieldset class="fs_person" id="person1">
+                            <h2 class="fs-title">Add Person</h2>
+                            <table>
+                                <!------ HEAD-ROW-------->
+                                <tr>
+                                    <th>Personal Information</th>
 
-                <fieldset>
-                    <h2 class="fs-title">Add Person</h2>
+                                    <th>Contact Infomation</th>
+
+                                </tr>
+                                <!------ROW-------->
+                                <tr>
+                                    <td><input type="text" pattern="[A-Za-z]{20}" title="Letters Only" name="firstname" placeholder="First Name" /></td>
+
+                                    <td><select name="country" id="country1">
+                                        <option value="-1" selected="selected" disabled="disabled">----</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="US">United States</option>
+                                    </select></td>
+                                </tr>
+                                <!------ROW-------->
+                                <tr>
+                                    <td><input type="text" pattern="[A-Za-z]{20}" title="Letters Only" name="lastname" placeholder="Last Name" /></td>
+
+                                    <td><select name="state" id="state1">
+                                        <option value="-1" selected="selected" disabled="disabled">----</option>
+                                    </select></td>
+                                </tr>
+                                <!------ROW-------->
+                                <tr>
+                                    <td><input type="date" min="1900-01-01" max="2010-01-01" /></td>
+
+                                    <td><input type="text" pattern="[A-Za-z'\-.]{25}" title="Only letters ' - . allowed" name="city" placeholder="City"/></td>
                     
-                    <table>
-                        <tr>
-                            <td><input type="text" pattern="[A-Za-z]{20}" title="Letters Only" name="FirstName" placeholder="First Name" /></td>
+                                </tr>
+                                <!------ROW-------->
+                                <tr>
                             
-                        </tr>
+                                    <td><input type="password" name="social" placeholder="Social Security" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" title="###-##-####" /></td>
 
-                        <tr>
-                            <td><input type="text" pattern="[A-Za-z]{20}" title="Letters Only" name="LastName" placeholder="Last Name" /></td>
-                            
-                        </tr>
+                                    <td><input type="text" name="street" placeholder="Street"/></td>
+                                </tr>
+                                <!------ROW-------->
+                                <tr>
+                                    <td><select name="gender">
+                                        <option value="-1" selected="selected" disabled="disabled">Select Gender</option>
+                                        <option value="male" >Male</option>
+                                        <option value="female" >Female</option>
+                                    </select></td>
 
-                        <tr>
-                            <td><select name="country" class="countries order-alpha include-CA-US presel-0" id="countryId">
-                                <option value="">Select Country</option>
-                            </select></td>
-                    
-                            </tr>
+                                    <td><input type="text" pattern="[0-9]{7}" title="Max 7 numbers" name="apt" placeholder="Apt Number"/></td>
 
-                            <tr>
-                                <td><select name="state" class="states order-alpha" id="stateId">
-                                <option value="">Select State</option>
-                                </select></td>
-                            </tr>
+                                </tr>
+                                <!------ROW-------->
+                                <tr>
+                                    <td><select name="maritalstatus">
+                                        <option value ="-1" selected="selected" disabled="disabled">Select Marital Status</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Widowed">Widowed</option>
+                                    </select></td>
 
-                            <tr>
-                                <td><select name="city" class="cities order-alpha" id="cityId">
-                                <option value="">Select City</option>
-                            </select></td>
+                                    <td><input type="text" pattern="[0-9]{3}-[0-9]{3}-{0-9}{4}" title="Format: ###-###-####" placeholder="Phone Number"/></td>
+                                </tr>
+                                <!------ROW-------->
+                                <tr>
+                                    <td><select name="employmentstatus">
+                                        <option value ="-1" selected="selected" disabled="disabled">Select Employment Status</option>
+                                        <option value="Employed">Employed</option>
+                                        <option value="Unemployed">Unemployed</option>
+                                        <option value="Student">Student</option>
+                                    </select></td>
 
-                            </tr>
-                    </table>
-                    
-                </fieldset>
-
-                <div id="append_person">
+                                    <td><input type="email" name="email" placeholder="Email" /></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </div>
                 </div>
 
-                <input type="button" name="next" class="next action-button" value="Next"/>
+                <input type="button" name="next" class="next action-button" value="Next" style="margin-right:20%;"/>
+                <input type="button" name="add" class="add action-button" value="Add Person" style="margin-left:20%;" id="add_person"/>
+                <input type="button" name="remove" class="remove action-button" value="Remove Person" id="remove_person"/>
             </div>
 
             <div class="policy_stage hide" id="add_vehicle_stage">
 
-               <fieldset>
-                    <h2 class="fs-title">Add Vehicle</h2>
+                <div id="vehicle_div">
+                    <div>
+                       <fieldset class="fs_vehicle" id="vehicle1">
+                            <h2 class="fs-title">Add Vehicle</h2>
+                           <table>
+                               <tr>
+                                   <th>Year</th>
+                                   <th>Make</th>
+                                   <th>Model</th>
+                               </tr>
 
-                    <select name="car-years" id="car-years"></select>  
-                    <select name="car-makes" id="car-makes"></select> 
-                    <select name="car-models" id="car-models"></select>
-                    <select name="car-model-trims" id="car-model-trims"></select>  
+                               <tr>
+                                    <td><select name="year" class="year" id="year1"></select></td>
+                                    <td><select name="make" class="make" id="make1"></select></td>
+                                    <td><select name="model" class="model" id="model1">
+                                        <option value="-1" selected="selected" disabled="disabled">----</option>
+                                   </select></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </div>
+                </div>
 
-                </fieldset>
-
-                <div id="append_vehicle"></div>
-
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+                <input type="button" name="next" class="next action-button" value="Next" style="margin-right:20%;"/>
+                <input type="button" name="previous" class="previous action-button" value="Previous"/>
+                
+                <input type="button" name="add" class="add action-button" value="Add Vehicle" style="margin-left:20%;" id="add_vehicle"/>
+                <input type="button" name="remove" class="remove action-button" value="Remove Vehicle" id="remove_vehicle"/>
             </div>
-
 
             <div class="policy_stage hide" id="select_policy_stage">
 
                 <fieldset>
                     <h2 class="fs-title">Select Policy</h2>
-
-                    
                 </fieldset>
 
-                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                <input type="submit" name="submit" class="submit action-button" value="Submit" style="margin-right:20%;"/>
+                <input type="button" name="previous" class="previous action-button" value="Previous"/>
+
             </div>
 
         </form>
