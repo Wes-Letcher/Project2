@@ -11,23 +11,5 @@ namespace Insurance_Web {
     
     
     public partial class PolicyPage {
-        
-        /// <summary>
-        /// basic_button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputSubmit basic_button;
-        
-        /// <summary>
-        /// extended_button control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputSubmit extended_button;
     }
 }

@@ -16,21 +16,51 @@ namespace Insurance_Web
             {
                 if (Request.QueryString != null)
                 {
-                    //only way it works for some dumn reason...
-                    string fn = "firstname";
-                    string ln = "lastname";
+                    List<Car> cars = new List<Car>();
+
+                    string fn = Request.Form["firstname"];
+                    string ln = Request.Form["lastname"];
+                    string bd = Request.Form["bd"]; //form YYYY-MM-dd
+                    string ss = Request.Form["social"];
+                    string gend = Request.Form["gender"];
+                    string marstat = Request.Form["maritalstatus"];
+                    string empstat = Request.Form["employmentstatus"];
+
+                    string cntry = Request.Form["country"];
+                    string st = Request.Form["state"];
+                    string city = Request.Form["city"];
+                    string str = Request.Form["street"];
+                    string apt = Request.Form["apt"];
+
+                    string lnc = Request.Form["license"];
+                    string oneYrAc = Request.Form["acc_one_yr1"];
+                    string fiveYrAc = Request.Form["acc_five_yr1"];
+
+                    string ph = Request.Form["phone"];
+                    string eml = Request.Form["email"];
+
+                    //Button button = sender;
+                    string prem = Request.Form["premium"];
+                    string pol = Request.Form["policy"];
 
 
-                    string t1 = Request.Form["firstname"];
-                    string t2 = Request.Form["lastname"];
-                    string t3 = Request.Form[fn];
-                    string t4 = Request.Form[ln];
+                    Policy policy = new Policy(prem, pol);
+                    Contact contact = new Contact(fn, ln, bd, ss, gend, marstat, cntry, st, city, str, apt, ph, eml);
 
-                    var t5= Request.Form["firstname"];
-                    var t6= Request.Form[fn];
-                    Policy policy = new Policy(t3,t4);
+                    int i = 1;
+                    do
+                    {
+                        string year = Request.Form["year" + i];
+                        string make = Request.Form["make" + i];
+                        string model = Request.Form["model" + i];
 
-                    int i = 0;
+                        cars.Add(new Car(year, make, model));
+
+                        i++;
+                    } while (Request.Form["model" + i] != null);
+
+
+                    int a = 0;
                 }
             }
         }

@@ -56,10 +56,10 @@
                                             <p style="padding-right:20%;margin-bottom:5px;padding-bottom:5px;" class="myfont">Had Accident Within One Year:</p>
                                            
                                             <div style="margin-bottom:0px;padding-bottom:0px;">
-                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_one_yr_yes1" name="acc_one_yr1" style="width:30px;"/>Yes</label>
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_one_yr_yes1" name="acc_one_yr1" style="width:30px;" value="yes"/>Yes</label>
                                             </div>
                                             <div style="margin-bottom:0px;padding-bottom:0px;">
-                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_one_yr_no1" name="acc_one_yr1" style="width:30px;"/> No </label>
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_one_yr_no1" name="acc_one_yr1" style="width:30px;" value="no"/> No </label>
                                             </div>
                                         </div>
 
@@ -69,7 +69,7 @@
                                     
                                 <!------ROW-------->
                                 <tr>
-                                    <td><input type="date" min="1900-01-01" max="2010-01-01" /></td>
+                                    <td><input type="date" name="bd" min="1900-01-01" max="2010-01-01" /></td>
 
                                     <td><input type="text" id="city" name="city" placeholder="City"/></td>
                     
@@ -97,10 +97,10 @@
                                             <p style="padding-right:20%;margin-bottom:5px;padding-bottom:5px;" class="myfont">Had Accident Within Five Year:</p>
                                            
                                             <div style="margin-bottom:0px;padding-bottom:0px;">
-                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_five_yr_yes1" name="acc_five_yr1" style="width:30px;"/>Yes</label>
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_five_yr_yes1" name="acc_five_yr1" style="width:30px;" value="yes"/>Yes</label>
                                             </div>
                                             <div style="margin-bottom:0px;padding-bottom:0px;">
-                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_five_yr_no1" name="acc_five_yr1" style="width:30px;"/> No </label>
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_five_yr_no1" name="acc_five_yr1" style="width:30px;" value="no"/> No </label>
                                             </div>
                                         </div>
                                     </td>
@@ -173,7 +173,7 @@
                         <tr>
                             <th rowspan="2" colspan="3"><h3>Basic Policy</h3></th>
 
-                            <th rowspan="2" colspan="3"><h3>Extended Policy</h3></th>
+                            <th rowspan="2" colspan="3"><h3>Recommended Policy</h3></th>
 
                         </tr>
 
@@ -226,19 +226,29 @@
                         <tr>
                             <td><h4>Monthly Premium: </h4></td>
                             <td><h4 id="basic_premium">$25.76</h4></td>
-                            <td><input id="basic_button" name="Get Policy" runat="server" type="submit" /></td>
+                            <td>   
+                                <div style="margin-bottom:0px;padding-bottom:0px;">
+                                    <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input required type="radio" name="policy" style="width:30px;" value="Basic"/>Basic</label>
+                                </div>
+                            </td>
 
                             <td><h4>Monthly Premium: </h4></td>
-                            <td><h4 id="extended_premium">$52.12</h4></td>
-                            <td><input id="extended_button" name="Get Policy" runat="server" type="submit"/></td>
+                            <td><h4 id="recommended_premium">$52.12</h4></td>
+                            <td>   
+                                <div style="margin-bottom:0px;padding-bottom:0px;">
+                                    <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input required type="radio" name="policy" style="width:30px;" value="Recommended"/>Recommended</label>
+                                </div>
+
+                            </td>
                         </tr>
                             </tbody>
                     </table>
 
                 </fieldset>
+                <input type="hidden" name="premium" value="52.25">
                 
+                <input type="submit" name="submit" class="action-button" value="Submit" runat="server" style="float:right;"/>
                 <input type="button" name="previous" class="previous action-button" value="Previous"/>
-
             </div>
 
         </div>

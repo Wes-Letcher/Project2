@@ -7,14 +7,14 @@ namespace Insurance_Web.Class
 {
     public class Policy
     {
-        public string firstName { get; set; }
-        public string lastName { get; set; }
+        public string type { get; set; }
+        public string premium { get; set; }
 
 
-        public Policy(string fn, string ln)
+        public Policy(string tp, string p)
         {
-            firstName = fn;
-            lastName = ln;
+            type = tp;
+            premium = p;
         }
     }
 }

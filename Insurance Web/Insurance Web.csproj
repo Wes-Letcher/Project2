@@ -179,6 +179,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Class\Car.cs" />
+    <Compile Include="Class\Contact.cs" />
     <Compile Include="Class\Policy.cs" />
     <Compile Include="PolicyPage.aspx.cs">
       <DependentUpon>PolicyPage.aspx</DependentUpon>

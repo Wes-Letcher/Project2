@@ -33,8 +33,6 @@ namespace Insurance_Web
 
                     var result = Request.Form[str];
 
-                    int i = 0;
-
                 }
             }
         }

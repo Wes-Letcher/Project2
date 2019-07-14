@@ -15,11 +15,7 @@ input[type=text], input[type=password], input[type=email], input[type=date] {
     margin: auto;
     vertical-align: bottom;
 }
-input[type=submit] {
-    height: 20px;
-    width: 50%;
-    margin: auto;
-    vertical-align: bottom;
+
 }
 input[type=radio] {
     width: 30px;
