@@ -18,8 +18,15 @@ namespace Insurance_Web
                     var obj = Request.Form;
 
                     var input = Request.Form["test"];
+
+
                 }
             }
         }
-    }
+
+		protected void Button2_Click(object sender, EventArgs e)
+		{
+			System.Windows.Forms.MessageBox.Show("My message here");
+		}
+	}
 }

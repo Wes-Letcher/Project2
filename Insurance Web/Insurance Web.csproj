@@ -46,17 +46,20 @@
   <ItemGroup>
     <Reference Include="Microsoft.Crm.Sdk.Proxy, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Phillip\source\repos\ConsoleApp1\packages\Microsoft.CrmSdk.CoreTools.9.0.3.4\content\bin\coretools\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
+      <HintPath>..\..\Revature Insurance\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.12\lib\net462\Microsoft.Crm.Sdk.Proxy.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.1.0\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xrm.Sdk">
-      <HintPath>C:\Users\Phillip\source\repos\ConsoleApp1\packages\Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.9.0.2.12\tools\Microsoft.Xrm.Sdk.dll</HintPath>
+      <HintPath>..\..\Revature Insurance\packages\Microsoft.CrmSdk.CoreAssemblies.9.0.2.12\lib\net462\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk.Workflow">
+      <HintPath>..\..\Revature Insurance\packages\Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.9.0.2.12\tools\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Xrm.Tooling.Connector">
-      <HintPath>C:\Users\Phillip\source\repos\ConsoleApp1\packages\Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.9.0.2.12\tools\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
+      <HintPath>..\..\Revature Insurance\packages\Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.9.0.2.12\tools\Microsoft.Xrm.Tooling.Connector.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -154,6 +157,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClaimForm.aspx" />
+    <Content Include="ClaimNumber.aspx" />
+    <Content Include="ClaimValidatePage.aspx" />
     <Content Include="PolicyPage.aspx" />
     <Content Include="ClaimPage.aspx" />
     <Content Include="Content\bootstrap-policy.css" />
@@ -228,6 +234,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="ClaimForm.aspx.cs">
+      <DependentUpon>ClaimForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimForm.aspx.designer.cs">
+      <DependentUpon>ClaimForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimNumber.aspx.cs">
+      <DependentUpon>ClaimNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimNumber.aspx.designer.cs">
+      <DependentUpon>ClaimNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimValidatePage.aspx.cs">
+      <DependentUpon>ClaimValidatePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimValidatePage.aspx.designer.cs">
+      <DependentUpon>ClaimValidatePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Class\Car.cs" />
     <Compile Include="Class\Contact.cs" />
     <Compile Include="Class\Policy.cs" />
