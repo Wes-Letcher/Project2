@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Claim" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ClaimPage.aspx.cs" Inherits="ClaimPage" %>
+﻿<%@ Page Title="Claim" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ClaimPage.aspx.cs" Inherits="Insurance_Web.ClaimPage" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 

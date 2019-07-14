@@ -60,7 +60,7 @@ namespace Insurance_Web
                     } while (Request.Form["model" + i] != null);
 
 
-                    int a = 0;
+                    
                 }
             }
         }
