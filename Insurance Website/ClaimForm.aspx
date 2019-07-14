@@ -68,7 +68,10 @@
         <br />
         <asp:Label ID="Label4" runat="server" Text="Label">Notes/Comments/Description</asp:Label>
         <br />
-        <asp:TextBox ID="TextBox1" runat="server" Height="83px" Width="300px"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br/>
+        <br/>
+
     </form>
 </body>
 </html>

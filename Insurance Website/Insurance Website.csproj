@@ -83,8 +83,23 @@
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\bootstrap-policy.css" />
     <Content Include="ClaimForm.aspx" />
+    <Content Include="Options\buick.txt" />
+    <Content Include="Options\CAStates.txt" />
+    <Content Include="Options\chevrolet.txt" />
+    <Content Include="Options\dodge.txt" />
+    <Content Include="Options\ford.txt" />
+    <Content Include="Options\honda.txt" />
+    <Content Include="Options\hyundai.txt" />
+    <Content Include="Options\kia.txt" />
+    <Content Include="Options\make.txt" />
+    <Content Include="Options\nissan.txt" />
+    <Content Include="Options\subaru.txt" />
+    <Content Include="Options\toyota.txt" />
+    <Content Include="Options\USStates.txt" />
+    <Content Include="Options\volkswagen.txt" />
+    <Content Include="Options\year.txt" />
     <Content Include="JS\Claim.js" />
-    <Content Include="PolicyForm.aspx" />
+	<Content Include="PolicyForm.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -117,6 +132,8 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+
+=======
     <Content Include="Scripts\umd\popper-utils.js" />
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />

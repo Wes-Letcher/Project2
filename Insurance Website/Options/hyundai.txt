@@ -1,0 +1,10 @@
+<option value="-1" selected="selected" disabled="disabled">Select Model</option>
+<option value="Accent">Accent</option>
+<option value="Azera">Azera</option>
+<option value="Elantra">Elantra</option>
+<option value="Genesis">Genesis</option>
+<option value="Genesis Coupe">Genesis Coupe</option>
+<option value="Santa Fe">Santa Fe</option>
+<option value="Sonata">Sonata</option>
+<option value="Tucson">Tucson</option>
+<option value="Veracruz">Veracruz</option>

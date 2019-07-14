@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insurance Website", "Insura
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{7A8CC56E-05CC-4403-B161-CBD4A5F3ECFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insurance Web", "Insurance Web\Insurance Web.csproj", "{D5AAA68C-F48B-4CB7-97E0-60635F014361}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7A8CC56E-05CC-4403-B161-CBD4A5F3ECFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A8CC56E-05CC-4403-B161-CBD4A5F3ECFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A8CC56E-05CC-4403-B161-CBD4A5F3ECFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5AAA68C-F48B-4CB7-97E0-60635F014361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AAA68C-F48B-4CB7-97E0-60635F014361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AAA68C-F48B-4CB7-97E0-60635F014361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AAA68C-F48B-4CB7-97E0-60635F014361}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

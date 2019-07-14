@@ -1,0 +1,16 @@
+<option value="-1" selected="selected" disabled="disabled">Select Model</option>
+<option value="Avalanche">Avalanche</option>
+<option value="Aveo">Aveo</option>
+<option value="Camaro">Camaro</option>
+<option value="Cobalt">Cobalt</option>
+<option value="Colorado">Colorado</option>
+<option value="Corvette">Corvette</option>
+<option value="Equinox">Equinox</option>
+<option value="Express">Express</option>
+<option value="HHR">HHR</option>
+<option value="Impala">Impala</option>
+<option value="Malibu">Malibu</option>
+<option value="Silverado">Silverado</option>
+<option value="Suburban">Suburban</option>
+<option value="Tahoe">Tahoe</option>
+<option value="Traverse">Traverse</option>
