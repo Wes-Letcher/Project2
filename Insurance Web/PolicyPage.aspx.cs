@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Insurance_Web.Class;
+using Microsoft.Xrm.Sdk;
 
 namespace Insurance_Web
 {
@@ -18,6 +19,7 @@ namespace Insurance_Web
                 {
                     List<Car> cars = new List<Car>();
 
+                    //get the form data
                     string fn = Request.Form["firstname"];
                     string ln = Request.Form["lastname"];
                     string bd = Request.Form["bd"]; //form YYYY-MM-dd
@@ -59,7 +61,10 @@ namespace Insurance_Web
                         i++;
                     } while (Request.Form["model" + i] != null);
 
-
+                    //create connection to crm
+                    CRMService crm = new CRMService();
+                    //create contract in crm
+                    Entity eContact = crm.CreateContact(contact);
                     
                 }
             }
