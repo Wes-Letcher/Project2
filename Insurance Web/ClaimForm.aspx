@@ -1,10 +1,44 @@
-﻿<%@ Page Title="Claim" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ClaimPage.aspx.cs" Inherits="Insurance_Web.ClaimPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ClaimForm.aspx.cs" Inherits="Insurance_Website.ClaimForm" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<!DOCTYPE html>
 
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <link href="HTML_Elements/Head.html" rel="import" />
+    <title>Revature Insurance</title>
+
+    <!--
+        To change the number of steps in the progress bar:
+        1. Add/remove from unordered list with id="progressbar" the necessary list items.
+        2. Alter parent div class s.t. col-md-offset-(# of steps) contains the correct number of steps.
+        3. In bootstrap-claim.css, in the #progress li properties, change the width property to be some percent of the new number of steps. 
+            For Example, if steps = 4, width = 1/steps = 1/4 = 25%
+    -->
+    <link href="CSS/bootstrap-claim.css" rel="stylesheet" />
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+    
+    <!-- <script type="text/javascript" src="JS/CarQuery.js"></script> -->
+
+</head>
+<body>
+
 <div class="row justify-content-center" runat="server">
     <div class="col-md-6 col-md-offset-2"> <!-- Change col-md-offset-(# of steps) number to match number of steps -->
+        <form id="msform" runat="server">
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active">Type</li>
+                <li>Damages</li>
+            </ul>
             <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">Claim Type</h2>
@@ -75,8 +109,10 @@
                     <textarea class="form-control" runat="server" rows="5" id="comment"></textarea>
                 </div> 
 
+                <input type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
 
-
+            <fieldset>
                 <h2 class="fs-title">Own Damages</h2>
                 <h3 class="fs-subtitle">Tell us what damages you and/or your car sustained</h3>
                 <div>
@@ -117,14 +153,15 @@
                     </select>
                 </div>
 
-                &nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button2_Click" Text="Submit" class="action-button" value="Submit" />
+                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Submit" class="action-button" value="Submit" />
             </fieldset>
-        
+        </form>
     </div>
 </div>
 <script type="text/javascript" src="Scripts/JS/Claim.js"></script>
 <script type="text/javascript" src="Scripts/JS/NextPrevSubmit.js"></script>
 
    
-    
-</asp:Content>
+</body>
+</html>

@@ -7,10 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Insurance_Web {
+namespace Insurance_Website {
     
     
-    public partial class ClaimPage {
+    public partial class ClaimForm {
+        
+        /// <summary>
+        /// msform control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm msform;
         
         /// <summary>
         /// incident_type control.
