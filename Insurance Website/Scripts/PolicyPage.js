@@ -84,9 +84,9 @@
                        </tr>
 
                        <tr>
-                            <td><select name="year" class="year" id="year${cur_vehicles}"></select></td>
-                            <td><select name="make" class="make" id="make${cur_vehicles}"></select></td>
-                            <td><select name="model" class="model" id="model${cur_vehicles}">
+                            <td><select name="year${cur_vehicles}" class="year" id="year${cur_vehicles}"></select></td>
+                            <td><select name="make${cur_vehicles}" class="make" id="make${cur_vehicles}"></select></td>
+                            <td><select name="model${cur_vehicles}" class="model" id="model${cur_vehicles}">
                                 <option value="-1" selected="selected" disabled="disabled">----</option>
                             </select></td>
                         </tr>
@@ -117,7 +117,7 @@
     $("#add_person").click(function () {
         if (cur_people < max_people) {
             cur_people += 1;
-
+            console.log(cur_people);
             $("#person_div").append(
                 `<div>
                         <fieldset class="fs_person" id="person${cur_people}">
@@ -126,8 +126,8 @@
                                 <!------ HEAD-ROW-------->
                                 <tr>
                                     <th>Personal Information</th>
-
                                     <th>Contact Infomation</th>
+                                    <th>Driving Record</th>
 
                                 </tr>
                                 <!------ROW-------->
@@ -139,6 +139,8 @@
                                         <option value="CA">Canada</option>
                                         <option value="US">United States</option>
                                     </select></td>
+
+                                    <td><input type="text" pattern="[0-9A-Za-z]{15}" title="Number and letters only" name="driverslicense" placeholder="Drivers License Number"/></td>
                                 </tr>
                                 <!------ROW-------->
                                 <tr>
@@ -147,6 +149,19 @@
                                     <td><select name="state" id="state${cur_people}">
                                         <option value="-1" selected="selected" disabled="disabled">----</option>
                                     </select></td>
+
+                                    <td rowspan="3">
+                                        <div style="margin:0px;padding:0px;">
+                                            <p style="padding-right:20%;margin-bottom:5px;padding-bottom:5px;" class="myfont">Had Accident Within One Year:</p>
+                                           
+                                            <div style="margin-bottom:0px;padding-bottom:0px;">
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_one_yr_yes${cur_people}" name="acc_one_yr${cur_people}" style="width:30px;"/>Yes</label>
+                                            </div>
+                                            <div style="margin-bottom:0px;padding-bottom:0px;">
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_one_yr_no${cur_people}" name="acc_one_yr${cur_people}" style="width:30px;"/> No </label>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <!------ROW-------->
                                 <tr>
@@ -172,6 +187,19 @@
 
                                     <td><input type="text" pattern="[0-9]{7}" title="Max 7 numbers" name="apt" placeholder="Apt Number"/></td>
 
+                                    <td rowspan="3">
+                                        <div style="margin:0px;padding:0px;">
+                                            <p style="padding-right:20%;margin-bottom:5px;padding-bottom:5px;" class="myfont">Had Accident Within Five Year:</p>
+                                           
+                                            <div style="margin-bottom:0px;padding-bottom:0px;">
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_five_yr_yes${cur_people}" name="acc_five_yr${cur_people}" style="width:30px;"/>Yes</label>
+                                            </div>
+                                            <div style="margin-bottom:0px;padding-bottom:0px;">
+                                                <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input type="radio" id="acc_five_yr_no${cur_people}" name="acc_five_yr${cur_people}" style="width:30px;"/> No </label>
+                                            </div>
+                                        </div>
+                                    </td>
+
                                 </tr>
                                 <!------ROW-------->
                                 <tr>
@@ -183,7 +211,7 @@
                                         <option value="Widowed">Widowed</option>
                                     </select></td>
 
-                                    <td><input type="text" pattern="[0-9]{3}-[0-9]{3}-{0-9}{4}" title="Format: ###-###-####" placeholder="Phone Number"/></td>
+                                    <td><input type="text" placeholder="Phone Number"/></td>
                                 </tr>
                                 <!------ROW-------->
                                 <tr>
@@ -214,6 +242,17 @@
             cur_people -= 1;
             $("#person_div").children().last().remove();
         }
+    });
+
+    //calc policy cost
+    $("#to_policy_stage").click(function () {
+        console.log("to policy");
+
+
+
+
+
+
     });
 
     $(".submit").click(function () {

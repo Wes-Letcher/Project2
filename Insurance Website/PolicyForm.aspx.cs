@@ -11,9 +11,23 @@ namespace Insurance_Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                if (Request.QueryString != null)
+                {
+                    var obj = Request.Form;
 
+                    var input = Request.Form["testinput"];
+                }
+            }
         }
 
+        protected void onSubmit(object sender, EventArgs e)
+        {
+           
+
+        }
+        
         protected void Get_Quote(object sender, EventArgs e)
         {
             //create contacts
