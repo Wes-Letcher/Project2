@@ -30,6 +30,7 @@
 
 </head>
 <body>
+
 <div class="row justify-content-center" runat="server">
     <div class="col-md-6 col-md-offset-2"> <!-- Change col-md-offset-(# of steps) number to match number of steps -->
         <form id="msform" runat="server">
@@ -161,5 +162,6 @@
 <script type="text/javascript" src="Scripts/JS/Claim.js"></script>
 <script type="text/javascript" src="Scripts/JS/NextPrevSubmit.js"></script>
 
+   
 </body>
 </html>
