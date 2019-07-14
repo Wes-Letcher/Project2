@@ -75,14 +75,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClaimNumber.aspx" />
+    <Content Include="ClaimValidatePage.aspx" />
     <Content Include="CSS\bootstrap-grid.css" />
     <Content Include="CSS\bootstrap-grid.min.css" />
+    <Content Include="CSS\bootstrap-claim.css" />
     <Content Include="CSS\bootstrap-reboot.css" />
     <Content Include="CSS\bootstrap-reboot.min.css" />
     <Content Include="CSS\bootstrap.css" />
     <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\bootstrap-policy.css" />
     <Content Include="ClaimForm.aspx" />
+
+   
+
+
+    <Content Include="Scripts\JS\NextPrevSubmit.js" />
+    
+
     <Content Include="Options\buick.txt" />
     <Content Include="Options\CAStates.txt" />
     <Content Include="Options\chevrolet.txt" />
@@ -99,7 +109,8 @@
     <Content Include="Options\volkswagen.txt" />
     <Content Include="Options\year.txt" />
     <Content Include="JS\Claim.js" />
-	<Content Include="PolicyForm.aspx" />
+	  <Content Include="PolicyForm.aspx" />
+
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -147,6 +158,20 @@
     </Compile>
     <Compile Include="ClaimForm.aspx.designer.cs">
       <DependentUpon>ClaimForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimNumber.aspx.cs">
+      <DependentUpon>ClaimNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimNumber.aspx.designer.cs">
+      <DependentUpon>ClaimNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimValidatePage.aspx.cs">
+      <DependentUpon>ClaimValidatePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimValidatePage.aspx.designer.cs">
+      <DependentUpon>ClaimValidatePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="CRMConnect.cs" />
     <Compile Include="Model\Contact.cs" />
