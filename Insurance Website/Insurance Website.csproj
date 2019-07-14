@@ -75,6 +75,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClaimNumber.aspx" />
+    <Content Include="ClaimValidatePage.aspx" />
     <Content Include="CSS\bootstrap-grid.css" />
     <Content Include="CSS\bootstrap-grid.min.css" />
     <Content Include="CSS\bootstrap-claim.css" />
@@ -135,6 +137,20 @@
     </Compile>
     <Compile Include="ClaimForm.aspx.designer.cs">
       <DependentUpon>ClaimForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimNumber.aspx.cs">
+      <DependentUpon>ClaimNumber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimNumber.aspx.designer.cs">
+      <DependentUpon>ClaimNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimValidatePage.aspx.cs">
+      <DependentUpon>ClaimValidatePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimValidatePage.aspx.designer.cs">
+      <DependentUpon>ClaimValidatePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="CRMConnect.cs" />
     <Compile Include="Model\Contact.cs" />

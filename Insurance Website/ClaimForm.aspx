@@ -31,13 +31,12 @@
 </head>
 <body>
 <div class="row justify-content-center" runat="server">
-    <div class="col-md-6 col-md-offset-3"> <!-- Change col-md-offset-(# of steps) number to match number of steps -->
-        <form id="msform" class="justify-content-center">
+    <div class="col-md-6 col-md-offset-2"> <!-- Change col-md-offset-(# of steps) number to match number of steps -->
+        <form id="msform" runat="server">
             <!-- progressbar -->
             <ul id="progressbar">
                 <li class="active">Type</li>
                 <li>Damages</li>
-                <li>Submit</li>
             </ul>
             <!-- fieldsets -->
             <fieldset>
@@ -45,7 +44,7 @@
                 <h3 class="fs-subtitle">Tell us what and when it happened</h3>
                 <div>
                     Incident Type: 
-                    <select class="selectpicker" runat="server">
+                    <select class="selectpicker" runat="server" id="incident_type">
                         <option value="car_accident">Car Accident</option>
                         <option value="hail_damage">Hail Damage</option>
                         <option value="vandalism">Vandalism</option>
@@ -106,7 +105,7 @@
                 <br />
                 <div class="form-group">
                     <label for="description">Notes/Comments/Description:</label>
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <textarea class="form-control" runat="server" rows="5" id="comment"></textarea>
                 </div> 
 
                 <input type="button" name="next" class="next action-button" value="Next"/>
@@ -117,7 +116,7 @@
                 <h3 class="fs-subtitle">Tell us what damages you and/or your car sustained</h3>
                 <div>
                     Driver injuries: 
-                    <select class="selectpicker" runat="server" id="injuries">
+                    <select class="selectpicker" runat="server" id="driver_injuries">
                         <option value="No injuries">No injuries</option>
                         <option value="Some injuries">Some injuries</option>
                         <option value="Serious injuries">Serious injuries</option>
@@ -127,7 +126,7 @@
                 </div>
                 <div>
                     Damages to your car: 
-                    <select>
+                    <select id="driver_car_damages" runat="server">
                         <option value="Minor damages">Minor damages</option>
                         <option value="Totalled">Totalled</option>
                     </select>
@@ -137,7 +136,7 @@
                 <h3 class="fs-subtitle">Tell us what happened with the other party</h3>
                 <div>
                     Driver injuries: 
-                    <select class="selectpicker" runat="server" id="Select1">
+                    <select class="selectpicker" runat="server" id="other_driver_injuries">
                         <option value="No injuries">No injuries</option>
                         <option value="Some injuries">Some injuries</option>
                         <option value="Serious injuries">Serious injuries</option>
@@ -147,30 +146,20 @@
                 </div>
                 <div>
                     Damages to their car: 
-                    <select>
+                    <select runat="server" id="other_car_damages">
                         <option value="Minor damages">Minor damages</option>
                         <option value="Totalled">Totalled</option>
                     </select>
                 </div>
 
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset>
-
-            <fieldset>
-                <h2 class="fs-title">Submit your claim</h2>
-                <h3 class="fs-subtitle">After you've submitted your claim, we will get back with you as soon as we can</h3>
-                <div>
-                    Your claim number is:
-                </div>
-                <div id="claim_num">
-                    123456789
-                </div>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Submit" class="action-button" value="Submit" />
             </fieldset>
         </form>
     </div>
 </div>
+<script type="text/javascript" src="Scripts/JS/Claim.js"></script>
 <script type="text/javascript" src="Scripts/JS/NextPrevSubmit.js"></script>
+
 </body>
 </html>
