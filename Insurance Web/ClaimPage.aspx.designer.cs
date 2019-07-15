@@ -13,6 +13,15 @@ namespace Insurance_Web {
     public partial class ClaimPage {
         
         /// <summary>
+        /// policy_num control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox policy_num;
+        
+        /// <summary>
         /// incident_type control.
         /// </summary>
         /// <remarks>
@@ -20,6 +29,15 @@ namespace Insurance_Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlSelect incident_type;
+        
+        /// <summary>
+        /// incident_type2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox incident_type2;
         
         /// <summary>
         /// Label3 control.
@@ -58,6 +76,15 @@ namespace Insurance_Web {
         protected global::System.Web.UI.HtmlControls.HtmlSelect incidentYear;
         
         /// <summary>
+        /// TextBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        
+        /// <summary>
         /// comment control.
         /// </summary>
         /// <remarks>
@@ -76,6 +103,15 @@ namespace Insurance_Web {
         protected global::System.Web.UI.HtmlControls.HtmlSelect driver_injuries;
         
         /// <summary>
+        /// driver_damages2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox driver_damages2;
+        
+        /// <summary>
         /// driver_car_damages control.
         /// </summary>
         /// <remarks>
@@ -83,6 +119,15 @@ namespace Insurance_Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlSelect driver_car_damages;
+        
+        /// <summary>
+        /// car_damages2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox car_damages2;
         
         /// <summary>
         /// other_driver_injuries control.
@@ -94,6 +139,15 @@ namespace Insurance_Web {
         protected global::System.Web.UI.HtmlControls.HtmlSelect other_driver_injuries;
         
         /// <summary>
+        /// other_driver_injuries2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox other_driver_injuries2;
+        
+        /// <summary>
         /// other_car_damages control.
         /// </summary>
         /// <remarks>
@@ -101,6 +155,24 @@ namespace Insurance_Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlSelect other_car_damages;
+        
+        /// <summary>
+        /// other_car_damages2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox other_car_damages2;
+        
+        /// <summary>
+        /// description2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox description2;
         
         /// <summary>
         /// Button1 control.

@@ -19,7 +19,7 @@
             <form id="form1" runat="server">
                 <fieldset>
                     <h2 class="fs-title">Policy Number</h2>
-                    <h3 class="fs-subtitle">What is your policy number</h3>
+                    <h3 class="fs-subtitle">Policy Number</h3>
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Check" class="action-button" />
                 </fieldset>

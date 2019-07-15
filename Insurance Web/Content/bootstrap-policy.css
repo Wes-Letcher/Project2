@@ -11,7 +11,6 @@ body {
 
 input[type=text], input[type=password], input[type=email], input[type=date] {
     height: 20px;
-    width: 80%;
     margin: auto;
     vertical-align: bottom;
 }
@@ -92,7 +91,7 @@ td {
         padding: 0px; /*Changed*/
         border: 1px solid #ccc;
         border-radius: 0px;
-        margin-bottom: 0px; /*Changed*/
+        /*Changed*/
         box-sizing: border-box;
    /*     font-family: montserrat; */
   /*      color: #2C3E50; */

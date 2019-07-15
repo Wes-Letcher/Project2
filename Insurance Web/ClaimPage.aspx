@@ -8,23 +8,29 @@
         <div id="form">
             <!-- fieldsets -->
             <fieldset>
-                <h2 class="fs-title">Claim Type</h2>
-                <h3 class="fs-subtitle">Tell us what and when it happened</h3>
-                <div>
-                    Incident Type: 
-                    <select class="selectpicker" runat="server" id="incident_type">
+                <h2 class="fs-title">Claim Form</h2>
+                <h3 class="fs-subtitle">Policy Number</h3>
+                <asp:TextBox id="policy_num" runat="server"></asp:TextBox>
+                <br />
+                <br />
+
+                <!--<h3 class="fs-subtitle">Claim Type</h3>-->
+
+                    <!--Incident Type: -->
+
+                    <!--<select class="selectpicker" runat="server" id="incident_type">
                         <option value="car_accident">Car Accident</option>
                         <option value="hail_damage">Hail Damage</option>
                         <option value="vandalism">Vandalism</option>
                         <option value="stolen">Stolen</option>
-                    </select>
-                </div>
-                <br />
+                    </select>-->
+                    <!--<asp:TextBox ID="incident_type2" runat="server"></asp:TextBox>-->
+
                 <!-- <asp:Label ID="Label3" runat="server" Text="Label">Date incident occurred</asp:Label> -->
                 
-                <div class="">
-                    <div class="">Date Incident Occured: </div>
-                    <select class="selectpicker" runat="server" id="incidentMonth">
+
+                    <!--<div class="">Date Incident Occured: </div>-->
+                    <!--<select class="selectpicker" runat="server" id="incidentMonth">
                         <option value="January">January</option>
                         <option value="February">February</option>
                         <option value="March">March</option>
@@ -68,52 +74,57 @@
                         <option value="2016">2016</option>
                         <option value="2015">2015</option>
                         <option value="2014">2014</option>
-                    </select>
-                </div>
-                <br />
+                    </select>-->
+                    <!--<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>-->
+
+
                 <!-- <div class="form-group d-flex justify-content-center">
                     <label for="description">Notes/Comments/Description:</label>
                     <textarea class="form-control" runat="server" rows="5" id="comment"></textarea>
                 </div> -->
 
-                <h3 class="fs-subtitle">Own Damages</h3>
-                <div>
-                    Driver injuries: 
-                    <select class="selectpicker" runat="server" id="driver_injuries">
-                        <option value="No injuries">No injuries</option>
-                        <option value="Some injuries">Some injuries</option>
-                        <option value="Serious injuries">Serious injuries</option>
-                        <option value="Permanent injuries">Permanent injuries</option>
-                        <option value="Fatality">Fatality</option>
-                    </select>
-                </div>
-                <div>
-                    Damages to your car: 
-                    <select id="driver_car_damages" runat="server">
-                        <option value="Minor damages">Minor damages</option>
-                        <option value="Totalled">Totalled</option>
-                    </select>
-                </div>
-                <br />
-                <h3 class="fs-subtitle">Other Party's Damages</h3>
-                <div>
-                    Driver injuries: 
-                    <select class="selectpicker" runat="server" id="other_driver_injuries">
-                        <option value="No injuries">No injuries</option>
-                        <option value="Some injuries">Some injuries</option>
-                        <option value="Serious injuries">Serious injuries</option>
-                        <option value="Permanent injuries">Permanent injuries</option>
-                        <option value="Fatality">Fatality</option>
-                    </select>
-                </div>
-                <div>
-                    Damages to their car: 
-                    <select runat="server" id="other_car_damages">
-                        <option value="Minor damages">Minor damages</option>
-                        <option value="Totalled">Totalled</option>
-                    </select>
-                </div>
+                <!--<h3 class="fs-subtitle">Own Damages</h3>-->
 
+                    <!--Driver injuries: -->
+                    <!--<select class="selectpicker" runat="server" id="driver_injuries">
+                        <option value="No injuries">No injuries</option>
+                        <option value="Some injuries">Some injuries</option>
+                        <option value="Serious injuries">Serious injuries</option>
+                        <option value="Permanent injuries">Permanent injuries</option>
+                        <option value="Fatality">Fatality</option>
+                    </select>-->
+                    <!--<asp:TextBox ID="driver_damages2" runat="server"></asp:TextBox>-->
+
+                    <!--Damages to your car: -->
+                    <!--<select id="driver_car_damages" runat="server">
+                        <option value="Minor damages">Minor damages</option>
+                        <option value="Totalled">Totalled</option>
+                    </select>-->
+                    <!--<asp:TextBox ID="car_damages2" runat="server"></asp:TextBox>-->
+
+                <!--<h3 class="fs-subtitle">Other Party's Damages</h3>-->
+
+                    <!--Other Driver injuries:--> 
+                    <!--<select class="selectpicker" runat="server" id="other_driver_injuries">
+                        <option value="No injuries">No injuries</option>
+                        <option value="Some injuries">Some injuries</option>
+                        <option value="Serious injuries">Serious injuries</option>
+                        <option value="Permanent injuries">Permanent injuries</option>
+                        <option value="Fatality">Fatality</option>
+                    </select>-->
+                    <!--<asp:TextBox ID="other_driver_injuries2" runat="server"></asp:TextBox>-->
+
+                    <!--Damages to their car: -->
+                    <!--<select runat="server" id="other_car_damages">
+                        <option value="Minor damages">Minor damages</option>
+                        <option value="Totalled">Totalled</option>
+                    </select>-->
+                    <!--<asp:TextBox ID="other_car_damages2" runat="server"></asp:TextBox>-->
+
+                    <h3 class="fs-subtitle">Description</h3>
+                    <asp:TextBox ID="description2" runat="server" Height="77px" Width="383px"></asp:TextBox>
+                    <br />
+                
                 <asp:Button ID="Button1" runat="server" OnClick="Button2_Click" Text="Submit" class="action-button" value="Submit" />
             </fieldset>
         </div>

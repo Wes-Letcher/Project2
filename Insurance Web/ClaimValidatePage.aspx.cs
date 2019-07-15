@@ -12,7 +12,7 @@ namespace Insurance_Website
 	public partial class ClaimValidatePage : System.Web.UI.Page
 	{
 		public static CrmServiceClient service;
-		IOrganizationService serv;
+		// IOrganizationService serv;
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			string crmConnectionString = "AuthType=Office365;Url=https://revaturegp.crm7.dynamics.com;UserName=system.robot@revaturegp.onmicrosoft.com;Password=robotPassword1";
