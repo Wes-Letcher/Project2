@@ -2,6 +2,28 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <style>
+    
+input[type=text], input[type=password], input[type=email], input[type=date] {
+    width: 80%;
+    height: 20px;
+    margin: auto;
+    vertical-align: bottom;
+}
+
+}
+input[type=radio] {
+    width: 30px;
+}
+
+select {
+    width: 80%;
+    margin: auto;
+}
+
+        </style>
+
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="Scripts/PolicyPage.js"></script>
 
