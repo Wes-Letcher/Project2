@@ -13,8 +13,8 @@ namespace Insurance_Web.Class
         public string lastName { get; set; }
         public string birthday { get; set; }
         public string social { get; set; }
-        public string gender { get; set; }
-        public string maritalStatus { get; set; }
+        public int gender { get; set; }
+        public int maritalStatus { get; set; }
         public string country { get; set; }
         public string state { get; set; }
         public string city { get; set; }
@@ -31,15 +31,28 @@ namespace Insurance_Web.Class
             lastName = ln;
             birthday = bd;
             social = ss;
-            gender = gend;
-            maritalStatus = marstat;
             country = cntry;
             state = st;
             city = c;
             street = str;
             apt = a;
             phone = ph;
-            email = eml;            
+            email = eml;           
+            
+            switch(gend)
+            {
+                case "male": gender = 1; break;
+                case "femle": gender = 2; break;
+            }
+
+            switch(marstat)
+            {
+                case "Single": maritalStatus = 1; break;
+                case "Married": maritalStatus = 2; break;
+                case "Divorced": maritalStatus = 3; break;
+                case "Widowed": maritalStatus = 4; break;
+
+            }
         }
     }
 }

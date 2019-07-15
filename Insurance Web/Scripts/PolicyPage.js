@@ -242,15 +242,53 @@
     $("#to_policy_stage").click(function () {
         console.log("to policy");
 
+        var basic_prem = 25.00;
+        var recommended_prem = 50.00;
 
+        var multiplier = 0;
+        let accOneYr = document.querySelector(`input[name="acc_one_yr1"]:checked`).value;
+        let accFiveYr = document.querySelector(`input[name="acc_five_yr1"]:checked`).value;
 
+        if (accOneYr == "yes") {
+            multiplier += 0.25;
+            console.log("accOneYr+: " + multiplier);
+        }
 
+        if (accFiveYr == "yes") {
+            multiplier += 0.1;
+            console.log("accFiveYr+: " + multiplier);
+        }
 
+        if (accFiveYr == "no" && accOneYr == "no") {
+            multiplier -= 0.1;
+            console.log("2no: " + multiplier);
+        }
 
+        console.log("before: " + multiplier);
+        switch (cur_vehicles) {
+            case 1: multiplier += 1.0; break;
+            case 2: multiplier += 1.95; break;
+            case 3: multiplier += 2.85; break;
+            case 4: multiplier += 3.65; break;
+            case 5: multiplier += 4.40; break;
+        }
+
+        basic_prem *= multiplier;
+        recommended_prem *= multiplier;
+
+        console.log("mult: " + multiplier);
+        console.log("basic: " + basic_prem);
+        console.log("rec: " + recommended_prem);
+
+        document.getElementById("show_basic").innerHTML = "$" + basic_prem.toFixed(2);
+        document.getElementById("premium_basic").value = basic_prem.toFixed(2);
+        document.getElementById("show_recommended").innerHTML = "$" +  recommended_prem.toFixed(2);
+        document.getElementById("premium_recommended").value = recommended_prem.toFixed(2);
+        var oo = 0;
     });
 
     $(".submit").click(function () {
-        return false;
+
     })
 
 });

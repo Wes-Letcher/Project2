@@ -225,7 +225,7 @@
 
                         <tr>
                             <td><h4>Monthly Premium: </h4></td>
-                            <td><h4 id="basic_premium">$25.76</h4></td>
+                            <td><h4 id="show_basic"></h4></td>
                             <td>   
                                 <div style="margin-bottom:0px;padding-bottom:0px;">
                                     <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input required type="radio" name="policy" style="width:30px;" value="Basic"/>Basic</label>
@@ -233,7 +233,7 @@
                             </td>
 
                             <td><h4>Monthly Premium: </h4></td>
-                            <td><h4 id="recommended_premium">$52.12</h4></td>
+                            <td><h4 id="show_recommended"></h4></td>
                             <td>   
                                 <div style="margin-bottom:0px;padding-bottom:0px;">
                                     <label class="myfont" style="padding-right:55%;margin-bottom:0px;padding-bottom:0px;"><input required type="radio" name="policy" style="width:30px;" value="Recommended"/>Recommended</label>
@@ -245,8 +245,8 @@
                     </table>
 
                 </fieldset>
-                <input type="hidden" name="premium" value="52.25">
-                
+                <input type="hidden" id="premium_basic" name="premium_basic" value="">
+                <input type="hidden" id="premium_recommended" name="premium_recommended" value="">
                 <input type="submit" name="submit" class="action-button" value="Submit" runat="server" style="float:right;"/>
                 <input type="button" name="previous" class="previous action-button" value="Previous"/>
             </div>
