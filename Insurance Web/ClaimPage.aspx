@@ -3,8 +3,9 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
   
-<div class="row justify-content-center" runat="server">
-    <div class="col-md-6 col-md-offset-2"> <!-- Change col-md-offset-(# of steps) number to match number of steps -->
+<div class="row">
+    <div class="col-md-offset-3" style="margin:auto">
+        <div id="form">
             <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">Claim Type</h2>
@@ -70,15 +71,12 @@
                     </select>
                 </div>
                 <br />
-                <div class="form-group">
+                <!-- <div class="form-group d-flex justify-content-center">
                     <label for="description">Notes/Comments/Description:</label>
                     <textarea class="form-control" runat="server" rows="5" id="comment"></textarea>
-                </div> 
+                </div> -->
 
-
-
-                <h2 class="fs-title">Own Damages</h2>
-                <h3 class="fs-subtitle">Tell us what damages you and/or your car sustained</h3>
+                <h3 class="fs-subtitle">Own Damages</h3>
                 <div>
                     Driver injuries: 
                     <select class="selectpicker" runat="server" id="driver_injuries">
@@ -97,8 +95,7 @@
                     </select>
                 </div>
                 <br />
-                <h2 class="fs-title">Other Party's Damages</h2>
-                <h3 class="fs-subtitle">Tell us what happened with the other party</h3>
+                <h3 class="fs-subtitle">Other Party's Damages</h3>
                 <div>
                     Driver injuries: 
                     <select class="selectpicker" runat="server" id="other_driver_injuries">
@@ -117,9 +114,9 @@
                     </select>
                 </div>
 
-                &nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button2_Click" Text="Submit" class="action-button" value="Submit" />
+                <asp:Button ID="Button1" runat="server" OnClick="Button2_Click" Text="Submit" class="action-button" value="Submit" />
             </fieldset>
-        
+        </div>
     </div>
 </div>
 <script type="text/javascript" src="Scripts/JS/Claim.js"></script>

@@ -44,5 +44,8 @@ namespace Insurance_Website
 			};
 			Response.Redirect("ClaimNumber.aspx");
 		}
+		protected void createRecord() {
+
+		}
 	}
 }
