@@ -110,6 +110,40 @@ namespace Insurance_Web
 
             return c;
         }
+
+		public void getPolicyID(Guid id)
+		{
+			QueryExpression query = new QueryExpression("new_policy");
+			query.ColumnSet.AddColumn("new_policyid");
+			query.ColumnSet.AddColumn("new_policy");
+			query.Criteria.AddCondition("new_policyid", ConditionOperator.Equal, id);
+
+			string fetch = $@"
+							<fetch version='1.0' output-format='xml-platform' mapping='logical' distinct='false'>
+							  <entity name='new_policy'>
+								<attribute name='new_policyid' />
+								<attribute name='new_policy' />
+								<attribute name='createdon' />
+								<order attribute='new_policy' descending='false' />
+								<filter type='and'>
+								  <condition attribute='new_policy' operator='eq' value='{id}' />
+								</filter>
+							  </entity>
+							</fetch>";
+
+
+
+			Entity policyCol = service.Retrieve("new_policy" , id, new ColumnSet(new string[] {"new_policy"}));
+
+			if (policyCol.Attributes.Contains("new_policy"))
+			{
+				System.Windows.Forms.MessageBox.Show("Policy ID is: " + policyCol.Attributes["new_policy"]);
+			}
+			else
+			{
+				System.Windows.Forms.MessageBox.Show("Policy Not Created");
+			}
+		}
         
     }
 }

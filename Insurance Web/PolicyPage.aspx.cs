@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Insurance_Web.Class;
 using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Query;
 
 namespace Insurance_Web
 {
@@ -83,7 +84,9 @@ namespace Insurance_Web
                     {
                         carEntities.Add(crm.CreateCar(car, policyEntity, p_guid));
                     }
-                }
+
+					crm.getPolicyID(p_guid);
+				}
             }
         }
     }

@@ -42,7 +42,7 @@ namespace Insurance_Web.Class
             switch(gend)
             {
                 case "male": gender = 1; break;
-                case "femle": gender = 2; break;
+                case "female": gender = 2; break;
             }
 
             switch(marstat)
